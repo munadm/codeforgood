@@ -1,4 +1,9 @@
-<?php session_start() ?>
+<?php session_start();
+if ($_SESSION["selection"] === NULL){
+    $_SESSION['selection'] = 'title';
+}
+ $select = $_SESSION["selection"];
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -37,6 +42,7 @@
         </ul>
       </div>
     </nav>
+    
 
     <div class="row">
       <div class="large-12 columns">
@@ -50,20 +56,57 @@
         </div>
       </div>
     </div>
-
-   <!-- <div class="row la" id="createc">
+    
+    
+    <div id="order">
+        <p><a href="funcontrol.php?type=title">By name</a> | <a href="funcontrol.php?type=goal">By fund</a></p>
+        
+    </div>
+    
+    
+    <?php
+        $con=mysqli_connect("localhost","root","cfg2014!","team_15");
+        $query = "Select * from fund_challenge2 order by " . $select;
+        
+        if(mysqli_connect_errno()){
+            echo "<h2> Failed to connect to MYSQL: " .mysqli_connect_error();
+        }
+        
+        $result = $con->query($query);
+         if($result->num_rows === 0) {
+             echo "<h2> Table fund_challenge2 Empty</h2>";
+         }
+         else{
+             while($row = $result->fetch_row()){
+                 echo '<div class="row la" id="createc">
       <div class="large-2 columns">
-        <img src="img/placeholder.jpg">
+        <img src="">
       </div>
       <div class="large-10 columns rtext">
-        <div class="name">
-          5 dollars a mile! - John Smith
-        </div>
+        <div class="name">'.
+          $row[1]
+        . '</div>
+         <div id = "descriptionevent">' . $row[2] .   
+         '</div>
+         <div id = "textthing3"> <i>Goal:</i>'. $row[3] .'</div>
+        <div id = "textthing3"> <i>Progress:</i>'. $row[4] .'</div>
+        
         <div class="progress success round">
-          <span class="meter" style="width: 40%"></span>
+          <span class="meter" style="width: 10%"></span>
         </div>
+         <div class="small-2 small-push-10 columns">
+            <a href="#" class="button [secondary success alert]" id="searcht">Sponsor!</a>
+         </div>
       </div>
-    </div> -->
+    </div>';
+             }
+         }
+         mysqli_close($con);
+    ?>
+    
+    
+    
+   <!--
 
     <div class="row la" id="createc">
       <div class="large-2 columns">
@@ -77,7 +120,7 @@
          </div>
          <div id = "textthing3"> <i>Goal:</i> $1000 </div>
         <div id = "textthing3"> <i>Progress:</i> $100 </div>
-       <!-- -->
+        
         <div class="progress success round">
           <span class="meter" style="width: 10%"></span>
         </div>
@@ -110,10 +153,7 @@
       </div>
     </div>
 
-
-
-  </div>
-
+-->
   <script src="js/vendor/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
   <script src="js/fiddly.js"></script>
