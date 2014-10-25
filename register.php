@@ -1,3 +1,4 @@
+
 <?php session_start();
 
 $name = $_POST["name"];
@@ -19,15 +20,19 @@ else{
     }
       
      */
-    $lastid = $con->query("SELECT MAX(A_ID) as LAST FROM ACCOUNT")->fetch_object()->LAST;
+    echo "Before grabbing last query <br>";
+    $lastid = $con->query("select max(a_id)as last from accounts")->fetch_object()->last;
     $currentid = $lastid + 1;
-    $query = "INSERT INTO ACCOUNT VALUES(" . $currentid . "," . $name .",". $email . ")";
+    echo "After generatingcurrent last query <br>";
+    $query = "insert into accounts values(" . $currentid . ",'" . $name ."','". $email . "','" . $pass. "')";
     if($con->query($query) === TRUE){
-        echo "<script> alert('New User: " . $name . "created sucessfully!') </script>";
+        echo "New User: " . $name . " created sucessfully!";
+        //echo "<script> alert('New User: " . $name . "created sucessfully!') </script>";
         mysqli_close($con);
+        $_SESSION['id'] = $lastid;
         header("http://ec2-54-211-233-68.compute-1.amazonaws.com/choice.html");
     } else{
-        echo "Error:" . $sql ."<br>". $con->error;
+        echo "Error: " ."<br>". $con->error;
     }
        
     
