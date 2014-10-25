@@ -92,11 +92,30 @@
   text-align: right;
 }
 
+#textthing{
+  margin-left: 700px
+}
+
+#textthing1{
+  margin-left: 750px
+}
+
+#textthing2{
+  margin-left: 750px
+}
+
+
+
 
 
 /*******************************/
 
 #searcht {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+#searcht1 {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
 }
