@@ -1,0 +1,62 @@
+
+.signup-panel {
+  padding: 15px;
+  margin-top: 30%;
+  margin-bottom: 20%;
+}
+
+.signup-panel i {
+  font-size: 20px;
+  line-height: 35px;
+  color: #aaa;
+}
+
+.signup-panel form input, .signup-panel form span {
+  height: 35px;
+}
+
+.signup-panel .welcome {
+  font-size: 26px;
+  text-align: center;
+  margin-left: 0;
+}
+
+.signup-panel p {
+  font-size: 13px;
+  font-weight: 200;
+
+}
+
+.signup-panel .button {
+  width: 100%;
+  background-color: #f1882b;
+  font-family: "Jura";
+}
+
+.signup-panel .button:hover{
+  background-color: #fac564;
+}
+
+.signup-panel #already a {
+  color: #f1882b;
+}
+
+.signup-panel #already a:hover {
+  color: #fac564;
+}
+
+
+#fbsign {
+  height: 50px;
+  width: 48%;
+}
+
+
+
+#twitsign {
+  height: 50px;
+  width: 48%;
+}
+
+
+

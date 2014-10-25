@@ -1,0 +1,133 @@
+#content {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#logo {
+  background-image: url("../img/logo.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 400px;
+  height: 80px;
+}
+
+#learn {
+  position: relative;
+  float: right;
+  text-align: right;
+  margin-top: -50px;
+}
+
+#sometext {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  font-family: 'Jura', sans-serif;
+  font-size: 30px;
+}
+
+.button {
+  background-color: #265577;
+  font-family: 'Jura', sans-serif;
+  font-size: 25px;
+}
+
+#navbar {
+  margin-bottom: 100px;
+}
+
+#active {
+  background-color: #5F7484;
+  box-shadow: inset 2px 2px 1px 1px #555;
+}
+
+.ctext {
+  font-family: 'Jura', sans-serif;
+  cursor: default;
+  font-size: 50px;
+  vertical-align: middle;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.la {
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.la:hover {
+  background-color: #F8F8F8;
+  cursor: pointer;
+}
+
+.la a {
+  color: #000;
+}
+
+.la a:hover {
+  color: #444;
+}
+
+.row img {
+  width: 100px;
+  height: 100px;
+  border-radius: 110px;
+  -webkit-border-radius: 110px;
+  -moz-border-radius: 110px;
+}
+
+#choices {
+  height: 100px;
+}
+
+.cbut {
+  margin: 10px;
+  background-color: #111;
+  width: 40%;
+}
+
+#fundraiser {
+  position: absolute;
+  text-align: right;
+}
+
+
+
+/*******************************/
+
+#searcht {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+.name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
+.progress {
+  margin-top: 10px;
+}
+
+/*******************************/
+
+form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#createc {
+  font-family: 'Jura', sans-serif;
+  font-size: 20px;
+}
+/*
+Event name
+Deadline
+Description*/
+
+
+
+
+
+
