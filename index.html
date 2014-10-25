@@ -23,13 +23,13 @@
             <img src="img/splash.png">
           </div>
 
-          <form method="post" action="/">
-            <div class="row collapse">
+          <form method="post" action="home.php">
+           <div class="row collapse">
               <div class="small-2  columns">
                 <span class="prefix"><i class="fi-torso-female"></i></span>
               </div>
               <div class="small-10  columns">
-                <input name="username" type="text" placeholder="username">
+                <input name="user" type="text" placeholder="username">
               </div>
             </div>
             <div class="row collapse">
@@ -37,7 +37,7 @@
                 <span class="prefix"><i class="fi-lock"></i></span>
               </div>
               <div class="small-10 columns ">
-                <input name="password" type="password" placeholder="password">
+                <input name="pass" type="password" placeholder="password">
               </div>
             </div>
 
@@ -50,9 +50,8 @@
               </div>
             </div>
 
-
+	     <input class="button" type="submit" value="Login">
           </form>
-          <input class="button" type="submit" value="Login">
           <div id="already">
             <p>Don't have an account? <a href="signup.html">Sign up here &raquo</a></p>
           </div>
