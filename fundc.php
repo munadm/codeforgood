@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <?php 
 /*
@@ -9,6 +10,13 @@ if ($_SESSION["selection"] === NULL){
   $_SESSION['selection'] = 'title'; //default value for initial session instance
 }
 $select = $_SESSION["selection"]; //get the user preference query string
+=======
+<?php session_start();
+if ($_SESSION["selection"] === NULL){
+    $_SESSION['selection'] = 'title';
+}
+ $select = $_SESSION["selection"];
+>>>>>>> 969373c7c94931f77aa68bff97f975ff65746ffc
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -18,7 +26,10 @@ $select = $_SESSION["selection"]; //get the user preference query string
   <title></title>
   <link rel="stylesheet" href="css/foundation.css" />
   <link rel="stylesheet" href="css/sponsor.css"/>
+<<<<<<< HEAD
   <link rel="stylesheet" href="css/foundation-icons.css"/>
+=======
+>>>>>>> 969373c7c94931f77aa68bff97f975ff65746ffc
   <link rel="stylesheet" href="icons/foundation-icons.css" />
 
   <script src="js/vendor/modernizr.js"></script>
@@ -44,7 +55,11 @@ $select = $_SESSION["selection"]; //get the user preference query string
     <nav id="navbar">
       <div class="large-12 columns">
         <ul class="button-group even-2">
+<<<<<<< HEAD
           <li><a class="button" href="sponsor.html" id="active">SPONSOR</a></li>
+=======
+          <li><a class="button" id="active">SPONSOR</a></li>
+>>>>>>> 969373c7c94931f77aa68bff97f975ff65746ffc
           <li><a class="button" href="fundraiser.html">FUNDRAISER</a></li>
         </ul>
       </div>
@@ -64,6 +79,7 @@ $select = $_SESSION["selection"]; //get the user preference query string
       </div>
     </div>
     
+<<<<<<< HEAD
     <!-- The div below is a link menu that calls a small scale php controller for setting the query parameters so the sort can be made to a consumers utilization -->
     <div id="order">
       <p><a href="funcontrol.php?type=title">By name</a> | <a href="funcontrol.php?type=goal">By fund</a></p>
@@ -109,6 +125,57 @@ $select = $_SESSION["selection"]; //get the user preference query string
 
 
 
+=======
+    
+    <div id="order">
+        <p><a href="funcontrol.php?type=title">By name</a> | <a href="funcontrol.php?type=goal">By fund</a></p>
+        
+    </div>
+    
+    
+    <?php
+        $con=mysqli_connect("localhost","root","cfg2014!","team_15");
+        $query = "Select * from fund_challenge2 order by " . $select;
+        
+        if(mysqli_connect_errno()){
+            echo "<h2> Failed to connect to MYSQL: " .mysqli_connect_error();
+        }
+        
+        $result = $con->query($query);
+         if($result->num_rows === 0) {
+             echo "<h2> Table fund_challenge2 Empty</h2>";
+         }
+         else{
+             while($row = $result->fetch_row()){
+                 echo '<div class="row la" id="createc">
+      <div class="large-2 columns">
+        <img src="">
+      </div>
+      <div class="large-10 columns rtext">
+        <div class="name">'.
+          $row[1]
+        . '</div>
+         <div id = "descriptionevent">' . $row[2] .   
+         '</div>
+         <div id = "textthing3"> <i>Goal:</i>'. $row[3] .'</div>
+        <div id = "textthing3"> <i>Progress:</i>'. $row[4] .'</div>
+        
+        <div class="progress success round">
+          <span class="meter" style="width: 10%"></span>
+        </div>
+         <div class="small-2 small-push-10 columns">
+            <a href="#" class="button [secondary success alert]" id="searcht">Sponsor!</a>
+         </div>
+      </div>
+    </div>';
+             }
+         }
+         mysqli_close($con);
+    ?>
+    
+    
+    
+>>>>>>> 969373c7c94931f77aa68bff97f975ff65746ffc
    <!--
 
     <div class="row la" id="createc">
@@ -156,7 +223,11 @@ $select = $_SESSION["selection"]; //get the user preference query string
       </div>
     </div>
 
+<<<<<<< HEAD
   -->
+=======
+-->
+>>>>>>> 969373c7c94931f77aa68bff97f975ff65746ffc
   <script src="js/vendor/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
   <script src="js/fiddly.js"></script>
