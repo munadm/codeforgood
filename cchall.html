@@ -31,12 +31,12 @@
       <div class="large-12 columns">
         <ul class="button-group even-2">
           <li><a class="button" href="sponsor.html">SPONSOR</a></li>
-          <li><a class="button" id="active">FUNDRAISER</a></li>
+          <li><a class="button" href="fundraiser.html" id="active">FUNDRAISER</a></li>
         </ul>
       </div>
     </nav>
 
-    <form>
+    <form method="post" action="createchallenge.php">
       <fieldset>
         <legend>Create a challenge!</legend>
 
@@ -45,7 +45,7 @@
             <span class="prefix">Challenge Name</span>
           </div>
           <div class="small-9 large-10 columns">
-            <input type="text" placeholder="What's your challenge name?">
+            <input type="text" name="challengeName" placeholder="What's your challenge name?">
           </div>
         </div>
 
@@ -55,21 +55,30 @@
             <span class="prefix">Description</span>
           </div>
           <div class="small-9 large-10 columns">
-            <textarea placeholder="Describe your challenge."></textarea>
+            <textarea placeholder="Describe your challenge." name ="description"></textarea>
+          </div>
+        </div>
+        
+        <div class="row collapse">
+          <div class="small-3 large-2 columns">
+            <span class="prefix">Goals</span>
+          </div>
+          <div class="small-9 large-10 columns">
+            <input type ="text" placeholder="How much do you want to fundraise? (e.g. 200)" name ="challengegoal">
           </div>
         </div>
 
-        <div class="row collapse">
+        <!--<div class="row collapse">
           <div class="small-3 large-2 columns">
             <span class="prefix">Deadline</span>
           </div>
           <div class="small-9 large-10 columns">
-            <input type="text" placeholder="Enter a date you'll complete the challenge by. (e.g. 10/12/14">
+            <input type="text" placeholder="Enter a date you'll complete the challenge by. (e.g. 10/12/14" name ="date">
           </div>
-        </div>
+        </div>-->
 
-        <a href="#" class="button expand" id="createc">Create your challenge!</a>
-
+        <!--<a href="#" class="button expand" id="createc">Create your challenge!</a>-->
+        <input class="button expand" type="submit" value="Create your challenge!">
         
 
 

@@ -2,6 +2,7 @@
   margin-top: 10px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 #logo {
@@ -20,7 +21,7 @@
 }
 
 #sometext {
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 50px;
   font-family: 'Jura', sans-serif;
@@ -41,6 +42,9 @@
   background-color: #5F7484;
   box-shadow: inset 2px 2px 1px 1px #555;
 }
+
+
+
 
 .ctext {
   font-family: 'Jura', sans-serif;
@@ -75,6 +79,7 @@
   border-radius: 110px;
   -webkit-border-radius: 110px;
   -moz-border-radius: 110px;
+  vertical-align: middle;
 }
 
 #choices {
@@ -92,6 +97,28 @@
   text-align: right;
 }
 
+#textthing{
+  margin-left: 700px
+}
+
+#textthing1{
+  margin-left: 750px
+}
+
+#textthing2{
+  margin-left: 750px
+}
+
+#textthing3{
+  margin-left: 600px
+}
+
+#textthing4{
+  margin-left: 780px
+}
+
+
+
 
 
 /*******************************/
@@ -101,13 +128,42 @@
   font-size: 12px;
 }
 
+#searcht1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+#order {
+  font-family: 'Jura', sans-serif;
+  text-align: right;
+  margin-right: 300px;
+}
+
+#order a {
+  color: #999;
+}
+
+#order a:hover {
+  color: #000;
+}
+
 .name {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
 }
 
-.progress {
-  margin-top: 10px;
+.descrip {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+.prog {
+}
+
+#sponsorb {
+  padding-top: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
 }
 
 /*******************************/
@@ -121,13 +177,38 @@ form {
   font-family: 'Jura', sans-serif;
   font-size: 20px;
 }
+
+#expand {
+  width: 100%;
+}
 /*
 Event name
 Deadline
 Description*/
 
 
+#space {
+  margin-bottom: 20px;
+}
 
+iframe {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#prog img{
+  width: 20px;
+  height: 20px;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+
+#prog img:hover {
+  cursor: pointer;
+}
 
 
 

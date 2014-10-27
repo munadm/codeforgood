@@ -44,19 +44,24 @@
   border-radius: 110px;
   -webkit-border-radius: 110px;
   -moz-border-radius: 110px;
-  cursor: pointer; }
+  cursor: pointer; 
+  opacity: 0.5;
+
+}
+
 
 .innerbox:hover, .picture:focus, #sponsorpic, #fundpic, .picture:active, #sponsorpic, #fundpic {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
+  opacity: 0.4;
   cursor: pointer; }
 
 #sponsorpic {
- background-image: url('../img/placeholder.jpg');
+ background-image: url('../img/sponsor.jpg');
 }
 
 #fundpic {
- background-image: url('../img/placeholder.jpg');
+ background-image: url('../img/fundraise.jpg');
 }
 
 .big {
